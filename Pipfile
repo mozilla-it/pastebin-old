@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dpaste = {editable = true,path = "."}
+
+[dev-packages]
+ipdb = "*"
+isort = "*"
+black = "*"
+django-sslserver = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+sphinx-rtd-theme = "*"
+sphinxcontrib-httpdomain = "*"
+
+[scripts]
+test = "./runtests.py"
+cleanup = "sh -c \"black --skip-string-normalization --line-length=80 --exclude='/(migrations)/' dpaste && isort -rc dpaste\""
+
+[pipenv]
+allow_prereleases = true

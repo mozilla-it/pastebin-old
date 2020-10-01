@@ -1,0 +1,6 @@
+.coverage
+build
+docs/_build
+dpaste.egg-info
+dpaste.db
+node_modules
